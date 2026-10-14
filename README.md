@@ -48,12 +48,15 @@ ssh -i "pree-key.pem" -L 8888:127.0.0.1:8080 ubuntu@YOUR_AWS_PUBLIC_IP -N
 
 ### 1. Route Verification
 We verified that the network route to AWS Port 22 is open and unobstructed by the local ISP network.
+
 ![Network Probe Success](Route_Verification.png)
 
 ### 2. Active Encrypted Pipeline
 Establishing the local port forward tunnel. The terminal remains blank and frozen, indicating a live, listening session.
+
 ![Active SSH Tunnel](tunnel.png)
 
 ### 3. Bypassing the Firewall Security Wall
 Accessing the remote isolated Python service directly from a local Google Chrome browser tab via `http://localhost:8888`.
+
 ![Private Service Loaded in Browser](browser.png)
